@@ -110,7 +110,7 @@ const ShowcaseSection: React.FC = () => {
                       
                       {/* Navigation */}
                       <div className="flex space-x-2 px-3">
-                        {project.preview.elements.find(el => el.type === 'nav')?.items?.map((item, idx) => (
+                        {((project.preview.elements.find(el => el.type === 'nav') as any)?.items as string[])?.map((item, idx) => (
                           <div key={idx} className="text-gray-300 text-xs px-2 py-1 bg-gray-700/50 rounded">{item}</div>
                         ))}
                       </div>
@@ -126,7 +126,7 @@ const ShowcaseSection: React.FC = () => {
                       <div className="px-3 flex-1">
                         {project.preview.elements.find(el => el.type === 'cards') && (
                           <div className="grid grid-cols-3 gap-1">
-                            {Array.from({ length: project.preview.elements.find(el => el.type === 'cards')?.count || 3 }).map((_, idx) => (
+                            {Array.from({ length: (project.preview.elements.find(el => el.type === 'cards') as any)?.count || 3 }).map((_, idx) => (
                               <div key={idx} className="bg-gray-700/40 rounded h-8"></div>
                             ))}
                           </div>
@@ -134,7 +134,7 @@ const ShowcaseSection: React.FC = () => {
                         
                         {project.preview.elements.find(el => el.type === 'content') && (
                           <div className="space-y-1">
-                            {Array.from({ length: project.preview.elements.find(el => el.type === 'content')?.sections || 2 }).map((_, idx) => (
+                            {Array.from({ length: (project.preview.elements.find(el => el.type === 'content') as any)?.sections || 2 }).map((_, idx) => (
                               <div key={idx} className="space-y-1">
                                 <div className="w-full h-2 bg-gray-700/40 rounded"></div>
                                 <div className="w-4/5 h-1 bg-gray-700/30 rounded"></div>
@@ -145,7 +145,7 @@ const ShowcaseSection: React.FC = () => {
                         
                         {project.preview.elements.find(el => el.type === 'grid') && (
                           <div className="grid grid-cols-3 gap-1">
-                            {Array.from({ length: project.preview.elements.find(el => el.type === 'grid')?.items || 6 }).map((_, idx) => (
+                            {Array.from({ length: Array.isArray((project.preview.elements.find(el => el.type === 'grid') as any)?.items) ? (project.preview.elements.find(el => el.type === 'grid') as any).items.length : (project.preview.elements.find(el => el.type === 'grid') as any)?.items || 6 }).map((_, idx) => (
                               <div key={idx} className="bg-gray-700/40 rounded h-6"></div>
                             ))}
                           </div>

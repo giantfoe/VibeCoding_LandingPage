@@ -41,9 +41,14 @@ const Header: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <button className="bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity duration-200">
+            <a 
+              href="https://discord.gg/QBgrZ2C4" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity duration-200"
+            >
               Join Community
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -92,9 +97,14 @@ const Header: React.FC = () => {
                 Community
               </a>
               <div className="px-3 py-2">
-                <button className="w-full bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity duration-200">
+                <a 
+                  href="https://discord.gg/QBgrZ2C4" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full bg-gradient-to-r from-primary to-accent text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity duration-200 text-center"
+                >
                   Join Community
-                </button>
+                </a>
               </div>
             </div>
           </div>

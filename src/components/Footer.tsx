@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
             <h3 className="text-foreground font-semibold mb-4">Community</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                <a href="https://discord.gg/QBgrZ2C4" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   Discord Server
                 </a>
               </li>
